@@ -31,6 +31,7 @@ export class SavingsController {
   }
 
   @Get()
+<<<<<<< HEAD
   @HttpCode(201)
   //findAll(@Query() query: string) {
     getListSavings(){
@@ -40,10 +41,21 @@ export class SavingsController {
   @Get(':numProduct')
   findOne(@Param('numProduct') numProduct: string) {
     return this.savingsService.findOne(numProduct);
+=======
+  findAll(@Query() query: string) {
+    console.log(query);
+    return this.savingsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.savingsService.findOne(+id);
+>>>>>>> d40c7c366858bdf9abfea05f4e77985c8f240ba8
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateSavingDto: UpdateSavingDto) {
+<<<<<<< HEAD
     return this.savingsService.update(id, updateSavingDto);
   }
 
@@ -52,5 +64,13 @@ export class SavingsController {
   //remove(@Param('id') id: string) {
     deleteSaving(@Param('id') id:string){
     return this.savingsService.remove(id);
+=======
+    return this.savingsService.update(+id, updateSavingDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.savingsService.remove(+id);
+>>>>>>> d40c7c366858bdf9abfea05f4e77985c8f240ba8
   }
 }

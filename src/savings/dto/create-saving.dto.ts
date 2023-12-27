@@ -33,6 +33,50 @@ export class CreateSavingDto {
   })
   @IsNotEmpty()
   stateProduct: string;
+<<<<<<< HEAD
+=======
+
+  @ApiProperty({
+    description: 'telephone person',
+    minimum: 1,
+    default: 1,
+  })
+  @IsNotEmpty()
+  contactInfo: string;
+
+  @ApiProperty({
+    description: 'name person',
+    minimum: 1,
+    default: 1,
+  })
+  @IsNotEmpty()
+  personName: string;
+
+  
+  @ApiProperty({
+    description: 'type person',
+    minimum: 1,
+    default: 1,
+  })
+  @IsNotEmpty()
+  typeIdent: string;
+
+  @ApiProperty({
+    description: 'identity person',
+    minimum: 1,
+    default: 1,
+  })
+  @IsNotEmpty()
+  numIdent: string;
+
+  @ApiProperty({
+    description: 'adviser',
+    minimum: 1,
+    default: 1,
+  })
+  @IsNotEmpty()
+  adviser: string;
+>>>>>>> d40c7c366858bdf9abfea05f4e77985c8f240ba8
 }
 function IsNotEmptyObjectject(): (
   target: CreateSavingDto,
